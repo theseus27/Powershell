@@ -33,3 +33,7 @@ function grep($regex, $dir) {
 function pkill($name) {
 	ps $name -ErrorAction SilentlyContinue | kill
 }
+
+function sshtufts {
+	ssh homework.cs.tufts.edu
+}
