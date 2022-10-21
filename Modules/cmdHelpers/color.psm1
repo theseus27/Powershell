@@ -1,4 +1,4 @@
-﻿function show-colors {
+﻿function color {
     $s1 = [char]27
     $s01 = "["
     $s2 = 30

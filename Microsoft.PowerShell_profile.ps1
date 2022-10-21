@@ -1,9 +1,7 @@
-Import-Module projectDev
-Import-Module display
 Import-Module PowerShellGet
+Get-ChildItem -include *.psm1 "C:\Users\Theseus\Documents\Powershell\Modules" -Recurse -Force | Import-Module
 
 $HOST.UI.RawUI.WindowTitle = "$((''+$pwd).replace($HOME, '~'))"
-
 
 function prompt {
 	"$ "
