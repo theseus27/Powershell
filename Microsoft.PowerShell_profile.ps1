@@ -3,13 +3,15 @@ Get-ChildItem -include *.psm1 "C:\Users\Theseus\Documents\Powershell\Modules" -R
 
 $HOST.UI.RawUI.WindowTitle = "$((''+$pwd).replace($HOME, '~'))"
 
-function prompt {
-	"$ "
-}
+function prompt { "$ " }
 
 function touch ($filename) {
 	"" | Out-File $filename -Encoding ASCII
 }
+
+# LINUX MODE
+# $global:linuxMode = $false;
+# if ($linuxMode -eq $true) { }
 
 function restart {
 	wt -p "PS7";
@@ -30,8 +32,4 @@ function grep($regex, $dir) {
 
 function pkill($name) {
 	ps $name -ErrorAction SilentlyContinue | kill
-}
-
-function sshtufts {
-	ssh homework.cs.tufts.edu
 }
