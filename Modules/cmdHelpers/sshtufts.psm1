@@ -1,5 +1,10 @@
-function sshtufts() {
-	ssh homework.cs.tufts.edu
+function sshtufts([string]$num) {
+    if ($num -eq $null) {
+        ssh homework.cs.tufts.edu
+    } 
+    else {
+	    ssh "tlim05@vm-hw${num}.cs.tufts.edu";
+    }
 }
 
 function vstufts($LC_folder) {
